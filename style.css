@@ -28,9 +28,22 @@ main {
   color: #333;
 }
 
-.article a {
+.short-description {
+  font-size: 1.1em;
+  margin-bottom: 1em;
+}
+
+.full-article {
+  display: none;  /* Inicialmente escondido */
+  margin-top: 1em;
+  font-size: 1em;
+}
+
+.read-more {
   text-decoration: none;
   color: #1a0dab;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 footer {
