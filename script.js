@@ -1,16 +1,20 @@
-document.querySelectorAll('.read-more').forEach(button => {
-  button.addEventListener('click', function(e) {
-    e.preventDefault();  // Impede o comportamento padrão do link (não vai recarregar a página)
+document.addEventListener('DOMContentLoaded', () => {
+  const readMoreLinks = document.querySelectorAll('.read-more');
 
-    const article = this.closest('.article');  // Encontra o elemento .article mais próximo do botão clicado
-    const fullArticle = article.querySelector('.full-article');  // A gaveta (conteúdo completo da notícia)
+  readMoreLinks.forEach(link => {
+    link.addEventListener('click', event => {
+      event.preventDefault();
 
-    // Verifica se a gaveta está visível ou não
-    if (fullArticle.style.display === 'none' || fullArticle.style.display === '') {
-      fullArticle.style.display = 'block';  // Mostra o conteúdo completo
-      this.textContent = 'Leia menos';  // Muda o texto do botão
-    } else {
-      fullArticle.style.display = 'none';  // Oculta o conteúdo completo
-      this.textContent = 'Leia mais';  // Muda o texto do botão novamente
-    }
+      const article = link.closest('.article');
+      const fullContent = article.querySelector('.full-article');
+
+      if (fullContent.style.display === 'block') {
+        fullContent.style.display = 'none';
+        link.textContent = 'Leia mais';
+      } else {
+        fullContent.style.display = 'block';
+        link.textContent = 'Mostrar menos';
+      }
+    });
   });
+});
