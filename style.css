@@ -52,3 +52,17 @@ footer {
   text-align: center;
   padding: 1em;
 }
+
+.full-article p {
+  margin-bottom: 1em; /* Espaço entre os parágrafos */
+  line-height: 1.6;    /* Altura da linha mais confortável para leitura */
+}
+
+.full-article {
+  display: none;
+  margin-top: 1em;
+  font-size: 1em;
+  max-width: 700px;     /* Limita a largura */
+  line-height: 1.6;
+  text-align: justify;  /* (Opcional) Deixa o texto justificado */
+}
