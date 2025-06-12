@@ -14,28 +14,3 @@ document.querySelectorAll('.read-more').forEach(button => {
       this.textContent = 'Leia mais';  // Muda o texto do botão novamente
     }
   });
-});
-
-document.querySelectorAll('.article').forEach(article => {
-  const readMoreBtn = article.querySelector('.read-more');
-  const fullArticle = article.querySelector('.full-article');
-
-  const showImagesBtn = article.querySelector('.show-images');
-  const imageGallery = article.querySelector('.image-gallery');
-
-  // Leia mais
-  readMoreBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    const isOpen = fullArticle.style.display === 'block';
-    fullArticle.style.display = isOpen ? 'none' : 'block';
-    this.textContent = isOpen ? 'Leia mais' : 'Leia menos';
-  });
-
-  // Mostrar imagens
-  showImagesBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    const isOpen = imageGallery.style.display === 'block';
-    imageGallery.style.display = isOpen ? 'none' : 'block';
-    this.textContent = isOpen ? 'Imagens' : 'Ocultar imagens';
-  });
-});
