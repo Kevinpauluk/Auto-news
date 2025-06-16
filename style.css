@@ -81,3 +81,11 @@ footer {
   background-color: #20232a;
   color: #fff;
 }
+
+.img-pequena {
+  width: 100%;
+  max-width: 350px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 12px;
+}
